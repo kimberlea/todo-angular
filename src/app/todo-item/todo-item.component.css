@@ -1,0 +1,23 @@
+.list-item {
+  height: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  padding-right: 15px;
+  font-size: 20px;
+}
+
+.list-item-check {
+  margin-right: 20px;
+}
+
+.list-item-label {
+  flex: 1;
+}
+
+.list-item-remove {
+  font-size: 30px;
+  margin-top: -7px;
+}

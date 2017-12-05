@@ -1,0 +1,5 @@
+<div class="list-item">
+  <input type="checkbox" class="check-toggle list-item-check" [(ngModel)]="item.completed"/>
+  <div class="list-item-label" [style.text-decoration]= "item.completed ? 'line-through' : 'none'" [style.color]="item.completed ? '#b9b9b9' : '#4d4d4d'">{{item.title}}</div>
+  <a class="list-item-remove" href="#" (click)="deleteClick.emit(item)">×</a>
+</div>

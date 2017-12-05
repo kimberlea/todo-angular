@@ -1,0 +1,31 @@
+<div class="page-wrapper">
+<header>
+  <h1>todos</h1>
+</header>
+<div class="list-entry-wrapper">
+  <input [(ngModel)]="newItemTitle" (keyup.enter)="addItem()"/>
+</div>
+
+<div class="list-items-wrapper">
+  <div class="list-items">
+    <todo-item *ngFor="let item of filteredItems()" [item]="item" (deleteClick)="removeItem($event)"></todo-item>
+  </div>
+  <div class="list-items-meta">
+    <div class="items-count">{{filteredItems().length}} items</div>
+    <div class="items-filter">
+      <a (click)="selectedFilter = 'all'" [class.all]="selectedFilter == 'all' ? true: false">All</a>
+      <a (click)="selectedFilter = 'active'" [class.active]="selectedFilter == 'active' ? true : false">Active</a>
+      <a (click)="selectedFilter = 'completed'" [class.completed]="selectedFilter == 'completed' ? true : false">Completed</a>
+    </div>
+    <div class="items-clear">
+      <a (click)="clearCompletedItems()">Clear Completed</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  Made by Kimberlea
+</footer>
+
+</div>
